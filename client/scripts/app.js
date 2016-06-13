@@ -1,1 +1,1 @@
-console.log('Cluck cluck!')
+var mainApp = angular.module('mainApp', ['ngRoute']);

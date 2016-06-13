@@ -17,6 +17,12 @@ module.exports = function(grunt){
         src: '*.html',
         dest: 'server/public/assets/views'
       },
+      htmlTemplates: {
+        expand: true,
+        cwd: 'client/views/templates/',
+        src: '*.html',
+        dest: 'server/public/assets/views/templates/'
+      },
       styles: {
         expand: true,
         cwd: 'client/styles',
