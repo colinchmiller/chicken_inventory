@@ -15,39 +15,54 @@
 <body>
   <div ng-include="'/assets/views/templates/header.html'"></div>
   <h2>Form for Chick Ordering</h2>
-  <form>
+  <form ng-controller = "ChickenFormController">
   <label>First Name</label>
-  <input></input>
+  <input ng-model="firstname"></input>
 
   <label>Last Name</label>
-  <input></input>
+  <input ng-model="lastname"></input>
 
   <label>Phone Number</label>
-  <input></input>
+  <input ng-model="phonenumber"></input>
 
   <label>Americauna</label>
-  <input type="number"></input>
+  <input type="number" ng-model="americauna"></input>
 
   <label>Buff Orpington</label>
-  <input type="number"></input>
+  <input type="number" ng-model="bufforpington"></input>
 
   <label>Barred Rock</label>
-  <input type="number"></input>
+  <input type="number" ng-model="barredrock"></input>
 
   <label>Australorp</label>
-  <input type="number"></input>
+  <input type="number" ng-model="australorp"></input>
 
   <label>Silver Laced Wyandotte</label>
-  <input type="number"></input>
+  <input type="number" ng-model="silverlacedwyandotte"></input>
 
   <label>California White</label>
-  <input type="number"></input>
+  <input type="number" ng-model="californiawhite"></input>
 
   <label>Rhode Island Red</label>
-  <input type="number"></input>
+  <input type="number" ng-model="rhodeislandred"></input>
 
   <label>Gold Star</label>
-  <input type="number"></input>
+  <input type="number" ng-model="goldstar"></input>
+
+  {{firstname}}
+  {{lastname}}
+  {{phonenumber}}
+  {{americauna}}
+  {{bufforpington}}
+  {{barredrock}}
+  {{australorp}}
+  {{silverlacedwyandotte}}
+  {{californiawhite}}
+  {{rhodeislandred}}
+  {{goldstar}}
+
   </form>
+
+
 </body>
 </html>
