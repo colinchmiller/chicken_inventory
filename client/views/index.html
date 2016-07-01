@@ -15,6 +15,7 @@
 <body>
   <div ng-include="'/assets/views/templates/header.html'"></div>
   <h2>Form for Chick Ordering</h2>
+
   <form ng-controller = "ChickenFormController">
   <label>First Name</label>
   <input ng-model="firstname"></input>
@@ -49,6 +50,7 @@
   <label>Gold Star</label>
   <input type="number" ng-model="goldstar"></input>
 
+
   {{firstname}}
   {{lastname}}
   {{phonenumber}}
@@ -60,6 +62,7 @@
   {{californiawhite}}
   {{rhodeislandred}}
   {{goldstar}}
+  <p>Chick count</p> {{chickcount}}
 
   </form>
 
