@@ -39,7 +39,7 @@
   <input type="number" ng-model="australorp"></input>
 
   <label>Silver Laced Wyandotte</label>
-  <input type="number" ng-model="silverlacedwyandotte"></input>
+  <input type="number" ng-model="silverwyandotte"></input>
 
   <label>California White</label>
   <input type="number" ng-model="californiawhite"></input>
@@ -50,19 +50,9 @@
   <label>Gold Star</label>
   <input type="number" ng-model="goldstar"></input>
 
-
-  {{firstname}}
-  {{lastname}}
-  {{phonenumber}}
-  {{americauna}}
-  {{bufforpington}}
-  {{barredrock}}
-  {{australorp}}
-  {{silverlacedwyandotte}}
-  {{californiawhite}}
-  {{rhodeislandred}}
-  {{goldstar}}
-  <p>Chick count</p> {{chickcount}}
+  <p>Chick count</p>
+  {{americauna + bufforpington + barredrock + australorp
+   + silverwyandotte + californiawhite + rhodeislandred + goldstar}}
 
   </form>
 
