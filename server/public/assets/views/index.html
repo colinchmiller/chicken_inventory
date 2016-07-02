@@ -17,38 +17,52 @@
   <h2>Form for Chick Ordering</h2>
 
   <form ng-controller = "ChickenFormController">
-  <label>First Name</label>
-  <input ng-model="firstname"></input>
 
-  <label>Last Name</label>
-  <input ng-model="lastname"></input>
+    <div class = "row">
+      <label>First Name</label>
+      <input ng-model="firstname" />
 
-  <label>Phone Number</label>
-  <input ng-model="phonenumber"></input>
+      <label>Last Name</label>
+      <input ng-model="lastname" />
 
-  <label>Americauna</label>
-  <input type="number" ng-model="americauna"></input>
+      <label>Phone Number</label>
+      <input ng-model="phonenumber" />
 
-  <label>Buff Orpington</label>
-  <input type="number" ng-model="bufforpington"></input>
+      <label>Email</label>
+      <input ng-model="email" />
+    </div>
 
-  <label>Barred Rock</label>
-  <input type="number" ng-model="barredrock"></input>
+    <div class = "row">
+      <label>Americauna</label>
+      <input type="number" ng-model="americauna" />
 
-  <label>Australorp</label>
-  <input type="number" ng-model="australorp"></input>
+      <label>Buff Orpington</label>
+      <input type="number" ng-model="bufforpington" />
 
-  <label>Silver Laced Wyandotte</label>
-  <input type="number" ng-model="silverwyandotte"></input>
+      <label>Barred Rock</label>
+      <input type="number" ng-model="barredrock" />
 
-  <label>California White</label>
-  <input type="number" ng-model="californiawhite"></input>
+      <label>Australorp</label>
+      <input type="number" ng-model="australorp" />
+    </div>
 
-  <label>Rhode Island Red</label>
-  <input type="number" ng-model="rhodeislandred"></input>
+    <div class="row">
 
-  <label>Gold Star</label>
-  <input type="number" ng-model="goldstar"></input>
+      <label>Silver Laced Wyandotte</label>
+      <input type="number" ng-model="silverwyandotte" />
+
+      <label>California White</label>
+      <input type="number" ng-model="californiawhite" />
+
+      <label>Rhode Island Red</label>
+      <input type="number" ng-model="rhodeislandred" />
+
+      <label>Gold Star</label>
+      <input type="number" ng-model="goldstar" />
+
+    </div>
+<p>Chick Count</p>
+{{chickCount}}
 
    <table ng-controller = "ChickenFormController">
      <tr>
