@@ -6,3 +6,21 @@ h1 {
   width: 1500px;
   margin: 0;
 }
+
+footer {
+  background-color: #000000;
+}
+
+#footer-content {
+  color: #ffffff;
+}
+
+#address {
+  display: inline-block;
+  float: left;
+}
+
+#hours {
+  display: inline-block;
+
+}
