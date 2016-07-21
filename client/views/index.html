@@ -21,12 +21,21 @@
     <div class = "row">
       <label>First Name</label>
       <input ng-model="firstname" />
+      <div class="alert alert-danger" ng-if="firstname.length == null || firstname.length === 0">
+        Required
+      </div>
 
       <label>Last Name</label>
       <input ng-model="lastname" />
+      <div class="alert alert-danger" ng-if="lastname.length == null || lastname.length === 0">
+        Required
+      </div>
 
       <label>Phone Number</label>
       <input ng-model="phonenumber" />
+      <div class="alert alert-danger" ng-if="phonenumber.length == null || phonenumber.length === 0">
+        Required
+      </div>
 
       <label>Email</label>
       <input ng-model="email" />
