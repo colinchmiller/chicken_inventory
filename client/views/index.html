@@ -75,7 +75,10 @@
 <p>Chick Count Total</p>
 {{ chickensum() }}
 
-<input class="btn btn-primary" type="submit" name="submit" value="SUMBIT">
+<input class="btn btn-primary" type="submit" name="submit" value="SUMBIT"
+ ng-hide="firstname.length == null || firstname.length === 0
+ || lastname.length == null || lastname.length === 0 || phonenumber.length == null
+ || phonenumber.length === 0 || chickensum() == 0 ">
 
   </form>
 
