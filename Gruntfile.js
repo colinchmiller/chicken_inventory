@@ -8,6 +8,10 @@ module.exports = function(grunt){
       app: {
         src: 'client/scripts/app.js',
         dest: 'server/public/assets/scripts/app.min.js'
+      },
+      controllers: {
+        src: 'client/scripts/controllers/*.js',
+        dest: 'server/public/assets/scripts/controllers/controllers.min.js'
       }
     },
     copy: {
@@ -16,6 +20,12 @@ module.exports = function(grunt){
         cwd: 'client/views',
         src: '*.html',
         dest: 'server/public/assets/views'
+      },
+      htmlRoutes: {
+        expand: true,
+        cwd: 'client/views/routes',
+        src: '*.html',
+        dest: 'server/public/assets/views/routes'
       },
       htmlTemplates: {
         expand: true,

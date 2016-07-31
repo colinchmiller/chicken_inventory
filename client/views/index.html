@@ -10,78 +10,14 @@
   <script type="text/javascript" src="./vendors/angular/angular.min.js"></script>
   <script type="text/javascript" src="./vendors/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="./assets/scripts/app.min.js"></script>
+  <script type="text/javascript" src="./assets/scripts/controllers/controllers.min.js"></script>
 </head>
 
 <body>
   <div ng-include="'/assets/views/templates/header.html'"></div>
-  <h2>Form for Chick Ordering</h2>
+  <div ng-include="'/assets/views/templates/nav.html'"></div>
 
-  <form ng-controller = "ChickenFormController">
-
-    <div class = "row">
-      <label>First Name</label>
-      <input ng-model="firstname" />
-      <div class="alert alert-danger" ng-if="firstname.length == null || firstname.length === 0">
-        Required
-      </div>
-
-      <label>Last Name</label>
-      <input ng-model="lastname" />
-      <div class="alert alert-danger" ng-if="lastname.length == null || lastname.length === 0">
-        Required
-      </div>
-
-      <label>Phone Number</label>
-      <input ng-model="phonenumber" />
-      <div class="alert alert-danger" ng-if="phonenumber.length == null || phonenumber.length === 0">
-        Required
-      </div>
-
-      <label>Email</label>
-      <input ng-model="email" />
-
-
-    </div>
-
-    <div class = "row">
-      <label>Americauna</label>
-      <input type="number" ng-model="americauna" />
-
-      <label>Buff Orpington</label>
-      <input type="number" ng-model="bufforpington" />
-
-      <label>Barred Rock</label>
-      <input type="number" ng-model="barredrock" />
-
-      <label>Australorp</label>
-      <input type="number" ng-model="australorp" />
-    </div>
-
-    <div class="row">
-
-      <label>Silver Laced Wyandotte</label>
-      <input type="number" ng-model="silverwyandotte" />
-
-      <label>California White</label>
-      <input type="number" ng-model="californiawhite" />
-
-      <label>Rhode Island Red</label>
-      <input type="number" ng-model="rhodeislandred" />
-
-      <label>Gold Star</label>
-      <input type="number" ng-model="goldstar" />
-
-    </div>
-<p>Chick Count Total</p>
-{{ chickensum() }}
-
-<input class="btn btn-primary" type="submit" name="submit" value="SUMBIT"
- ng-hide="firstname.length == null || firstname.length === 0
- || lastname.length == null || lastname.length === 0 || phonenumber.length == null
- || phonenumber.length === 0 || chickensum() == 0 ">
-
-  </form>
-
+  <div ng-view></div>
 
   <div ng-include="'assets/views/templates/footer.html'"></div>
 </body>
