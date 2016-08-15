@@ -1,10 +1,30 @@
 h1 {
-  color: blue;
+  color: brown;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.chick-form {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f6f6f6;
 }
 
 .row {
   width: 1500px;
   margin: 0;
+}
+
+/*.form-item label, .form-item input, .form-item p{
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+}*/
+
+.chick-total p{
+  display: inline-block;
 }
 
 footer {
@@ -17,10 +37,8 @@ footer {
 
 #address {
   display: inline-block;
-  float: left;
 }
 
 #hours {
   display: inline-block;
-
 }

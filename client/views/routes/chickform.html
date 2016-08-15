@@ -1,70 +1,111 @@
-<h2>Form for Chick Ordering</h2>
+<h2 class="section-header">Chick Ordering Form</h2>
 
-<form ng-controller = "ChickFormController">
+<div class="chick-form" ng-controller = "ChickFormController">
+  <form ng-hide="hideform == true">
 
-  <div class = "row">
-    <label>First Name</label>
-    <input ng-model="firstname" />
-    <div class="alert alert-danger" ng-if="firstname.length == null || firstname.length === 0">
-      Required
+      <div class="form-group">
+        <label>First Name</label>
+        <input ng-model="firstname" />
+        <p class="alert alert-danger" ng-if="firstname.length == null || firstname.length === 0">
+          Required
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name</label>
+        <input ng-model="lastname" />
+        <p class="alert alert-danger" ng-if="lastname.length == null || lastname.length === 0">
+          Required
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input ng-model="phonenumber" />
+        <p class="alert alert-danger" ng-if="phonenumber.length == null || phonenumber.length === 0">
+          Required
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input ng-model="email" />
+      </div>
+
+      <div class="form-group">
+        <label>Date for Chick Delivery</label>
+          <!-- <input ng-options="" ng-model="chickdate"/> -->
+      </div>
+
+
+    <div class = "form-group">
+      <label>Americauna</label>
+      <input type="number" ng-model="americauna" />
     </div>
 
-    <label>Last Name</label>
-    <input ng-model="lastname" />
-    <div class="alert alert-danger" ng-if="lastname.length == null || lastname.length === 0">
-      Required
+    <div class = "form-group">
+      <label>Buff Orpington</label>
+      <input type="number" ng-model="bufforpington" />
     </div>
 
-    <label>Phone Number</label>
-    <input ng-model="phonenumber" />
-    <div class="alert alert-danger" ng-if="phonenumber.length == null || phonenumber.length === 0">
-      Required
+    <div class = "form-group">
+      <label>Barred Rock</label>
+      <input type="number" ng-model="barredrock" />
     </div>
 
-    <label>Email</label>
-    <input ng-model="email" />
+    <div class = "form-group">
+      <label>Australorp</label>
+      <input type="number" ng-model="australorp" />
+    </div>
 
-    <lebel>Date for Chick Delivery</label>
-      <input ng-repeat="chickdate" />
+    <div class = "form-group">
+      <label>Silver Laced Wyandotte</label>
+      <input type="number" ng-model="silverwyandotte" />
+    </div>
 
+    <div class = "form-group">
+      <label>California White</label>
+      <input type="number" ng-model="californiawhite" />
+    </div>
 
+    <div class = "form-group">
+      <label>Rhode Island Red</label>
+      <input type="number" ng-model="rhodeislandred" />
+    </div>
+
+    <div class = "form-group">
+      <label>Gold Star</label>
+      <input type="number" ng-model="goldstar" />
+    </div>
+
+    <div class = "chick-total">
+      <p>Chick Count Total</p>
+      <p>{{ chickenSum() }}</p>
+      <p class="alert alert-danger" ng-if="chickenSum() >= 10">Orders of 10 or more chicks will require prepayment</p>
+    </div>
+
+  <input class="btn btn-primary" type="submit" name="submit" value="SUMBIT"
+  ng-hide="firstname.length == null || firstname.length === 0
+  || lastname.length == null || lastname.length === 0 || phonenumber.length == null
+  || phonenumber.length === 0 || chickenSum() == 0" ng-click="submitChicken()">
+
+  </form>
+
+  <div class="confirmation" ng-hide="hideform == false || thankyou == true">
+    <h2>Please confirm your Order:</h2>
+    <p>{{firstname}}</p>
+    <p>{{lastname}}</p>
+    <p>{{phonenumber}}</p>
+    <p ng-if="email">{{email}}</p>
+    <h4>Is your information and selection of {{chickenSum()}} chicks correct?</h4>
+    <div class="btn btn-info" ng-click="chickenConfirm()">YES</div>
+    <div class="btn btn-info" ng-click="chickenWarn()">NO</div>
   </div>
 
-  <div class = "row">
-    <label>Americauna</label>
-    <input type="number" ng-model="americauna" />
-
-    <label>Buff Orpington</label>
-    <input type="number" ng-model="bufforpington" />
-
-    <label>Barred Rock</label>
-    <input type="number" ng-model="barredrock" />
-
-    <label>Australorp</label>
-    <input type="number" ng-model="australorp" />
+  <div class="thank-you" ng-show="thankyou == true">
+    <h3>Thank you!</h3>
+    <p>Your order has been placed. If you have any questions, please contact Eggplant
+      Urban Farm Supply for assistance.</p>
   </div>
 
-  <div class="row">
-
-    <label>Silver Laced Wyandotte</label>
-    <input type="number" ng-model="silverwyandotte" />
-
-    <label>California White</label>
-    <input type="number" ng-model="californiawhite" />
-
-    <label>Rhode Island Red</label>
-    <input type="number" ng-model="rhodeislandred" />
-
-    <label>Gold Star</label>
-    <input type="number" ng-model="goldstar" />
-
-  </div>
-<p>Chick Count Total</p>
-{{ chickenSum() }}
-
-<input class="btn btn-primary" type="submit" name="submit" value="SUMBIT"
-ng-hide="firstname.length == null || firstname.length === 0
-|| lastname.length == null || lastname.length === 0 || phonenumber.length == null
-|| phonenumber.length === 0 || chickensum() == 0" ng-click="submitChicken()">
-
-</form>
+</div>

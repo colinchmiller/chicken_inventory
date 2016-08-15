@@ -1,5 +1,6 @@
 mainApp.controller('ChickFormController', ['$scope', '$http', function($scope, $http){
 
+//setting baseline 0 value for chick inventory to maintain form control function
   $scope.americauna = 0;
   $scope.bufforpington = 0;
   $scope.barredrock = 0;
@@ -9,16 +10,31 @@ mainApp.controller('ChickFormController', ['$scope', '$http', function($scope, $
   $scope.rhodeislandred = 0;
   $scope.goldstar = 0;
 
-  $scope.chickdate = [10/21/15, 10/31/15, 11/2/15];
+  $scope.chickdate = ["10/21/15", "10/31/15", "11/2/15"];
+  $scope.hideform = false;
 
-  $scope.chickensum = function() {
+//function to sum the chicken inventory to a single variable for use on form
+  $scope.chickenSum = function() {
     return $scope.americauna + $scope.bufforpington + $scope.barredrock +
     $scope.australorp + $scope.silverwyandotte + $scope.californiawhite +
     $scope.rhodeislandred + $scope.goldstar;
 
   }
 
+//Submit button on form to go to confirmation window
   $scope.submitChicken = function() {
-    console.log("Cluck!");
+    $scope.hideform = true;
   }
+
+//If confirmation window answer "Yes"
+  $scope.chickenConfirm = function(){
+    $scope.thankyou = true;
+  }
+
+//If confirmation window answer "No"
+ $scope.chickenWarn = function(){
+  $scope.hideform = false;
+}
+
+
 }]);
