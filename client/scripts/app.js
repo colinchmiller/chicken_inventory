@@ -2,8 +2,8 @@ var mainApp = angular.module('mainApp', ['ngRoute']);
 
 mainApp.config(['$routeProvider', function($routeProvider){
   $routeProvider.
-    when('/chickendescriptions', {
-      templateUrl: 'assets/views/routes/chickendescriptions.html',
+    when('/admin', {
+      templateUrl: 'assets/views/routes/admin.html',
       controller: ''
     }).
     when('/chickform', {
