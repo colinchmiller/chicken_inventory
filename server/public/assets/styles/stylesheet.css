@@ -1,6 +1,14 @@
 h1, h2 {
   color: brown;
 }
+.chicknumber {
+  text-align: center;
+  width: 30px;
+}
+.chicks {
+  float:left;
+  clear:left;
+}
 
 .section-header {
   text-align: center;
@@ -29,6 +37,7 @@ h1, h2 {
 
 footer {
   background-color: #000000;
+  clear: left;
 }
 
 #footer-content {

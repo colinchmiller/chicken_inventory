@@ -10,7 +10,7 @@ mainApp.controller('ChickFormController', ['$scope', '$http', function($scope, $
   $scope.rhodeislandred = 0;
   $scope.goldstar = 0;
 
-  $scope.chickdate = ["10/21/15", "10/31/15", "11/2/15"];
+  $scope.chickdate = ['10/15/2016', '10/31/2016'];
   $scope.hideform = false;
 
 //function to sum the chicken inventory to a single variable for use on form

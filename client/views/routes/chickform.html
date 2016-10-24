@@ -34,13 +34,19 @@
 
       <div class="form-group">
         <label>Date for Chick Delivery</label>
-          <!-- <input ng-options="" ng-model="chickdate"/> -->
+          <select>
+            <option value=""> --- Please Select ---</option>
+            <option ng-repeat="date in chickdate" value="{{date}}">{{date}}</option>
+          </select>
+          <p class="alert alert-danger" ng-if="chickdate == ''">
+            Required
+          </p>
       </div>
 
 
-    <div class = "form-group" ng-mouseenter="show_americauna = true" ng-mouseleave="show_americauna = false">
+    <div class="form-group col-md-2 chicks" ng-mouseenter="show_americauna = true" ng-mouseleave="show_americauna = false">
       <label >Americauna</label>
-      <input type="number" ng-model="americauna" />
+      <input class="chicknumber" type="number" ng-model="americauna" />
     </div>
     <div ng-show="show_americauna">
       <h2>Americauna/Easter Egger</h2>
@@ -51,9 +57,9 @@
      Small pea comb. A fun, friendly addition to the backyard flock.</p>
     </div>
 
-    <div class = "form-group" ng-mouseenter="show_bufforpington = true" ng-mouseleave="show_bufforpington = false">
+    <div class="form-group col-md-2 chicks" ng-mouseenter="show_bufforpington = true" ng-mouseleave="show_bufforpington = false">
       <label>Buff Orpington</label>
-      <input type="number" ng-model="bufforpington" />
+      <input class="chicknumber" type="number" ng-model="bufforpington" />
     </div>
     <div ng-show="show_bufforpington">
       <h2>Buff Orpington</h2>
@@ -61,9 +67,9 @@
       <p>Originally bred in England, cold-hardy, large friendly golden birds of quiet disposition, reliable layers of large brown eggs.</p>
     </div>
 
-    <div class = "form-group" ng-mouseenter="show_barredrock = true" ng-mouseleave="show_barredrock = false">
+    <div class = "form-group col-md-2 chicks" ng-mouseenter="show_barredrock = true" ng-mouseleave="show_barredrock = false">
       <label>Barred Rock</label>
-      <input type="number" ng-model="barredrock" />
+      <input class="chicknumber" type="number" ng-model="barredrock" />
     </div>
     <div ng-show="show_barredrock">
       <h2>Barred Rock</h2>
@@ -71,9 +77,9 @@
       <p>All-American breed from the 1860s, great dual-purpose bird, excellent layer, adaptable, cold-hardy and friendly, black and white zebra striped feathers.</p>
     </div>
 
-    <div class = "form-group" ng-mouseenter="show_australorp = true" ng-mouseleave="show_australorp = false">
+    <div class = "form-group col-md-2 chicks" ng-mouseenter="show_australorp = true" ng-mouseleave="show_australorp = false">
       <label>Black Australorp</label>
-      <input type="number" ng-model="australorp" />
+      <input class="chicknumber" type="number" ng-model="australorp" />
     </div>
     <div ng-show="show_australorp">
       <h2>Black Australorp</h2>
@@ -81,9 +87,9 @@
       <p>The “Australian Orpington” is a prolific layer, docile, quiet, very hardy, shiny rich black plumage with a greenish-purple sheen.</p>
     </div>
 
-    <div class = "form-group" ng-mouseenter="show_silverwyandotte = true" ng-mouseleave="show_silverwyandotte = false">
+    <div class = "form-group col-md-2 chicks" ng-mouseenter="show_silverwyandotte = true" ng-mouseleave="show_silverwyandotte = false">
       <label>Silver Laced Wyandotte</label>
-      <input type="number" ng-model="silverwyandotte" />
+      <input class="chicknumber" type="number" ng-model="silverwyandotte" />
     </div>
     <div ng-show="show_silverwyandotte">
       <h2>Silver Laced Wyandotte</h2>
@@ -91,9 +97,9 @@
       <p>Superb dual-purpose heritage breed, good-natured, very cold-hardy, dependable layer, showy feathers are silvery white and edged with black.</p>
     </div>
 
-    <div class = "form-group" ng-mouseenter="show_californiawhite = true" ng-mouseleave="show_californiawhite = false">
+    <div class = "form-group col-md-2 chicks" ng-mouseenter="show_californiawhite = true" ng-mouseleave="show_californiawhite = false">
       <label>California White</label>
-      <input type="number" ng-model="californiawhite" />
+      <input class="chicknumber" type="number" ng-model="californiawhite" />
     </div>
     <div ng-show="show_californiawhite">
       <h2>California White</h2>
@@ -101,9 +107,9 @@
       <p>Classic American breed, great for backyard flocks; hardy, prolific layers. A beautiful white chicken with a docile temperament, very productive white egg-layer, with a larger body than a Leghorn.</p>
     </div>
 
-    <div class = "form-group" ng-mouseenter="show_rhodeislandred = true" ng-mouseleave="show_rhodeislandred = false">
+    <div class = "form-group col-md-2 chicks" ng-mouseenter="show_rhodeislandred = true" ng-mouseleave="show_rhodeislandred = false">
       <label>Rhode Island Red</label>
-      <input type="number" ng-model="rhodeislandred" />
+      <input class="chicknumber" type="number" ng-model="rhodeislandred" />
     </div>
     <div ng-show="show_rhodeislandred">
       <h2>Rhode Island Red</h2>
@@ -111,15 +117,16 @@
       <p>Classic American breed, great for backyard flocks, hardy, prolific layers, calm disposition, lustrous, rich, dark red color with a black tail.</p>
     </div>
 
-    <div class = "form-group" ng-mouseenter="show_goldstar = true" ng-mouseleave="show_goldstar = false">
+    <div class = "form-group col-md-2 chicks" ng-mouseenter="show_goldstar = true" ng-mouseleave="show_goldstar = false">
       <label>Gold Star</label>
-      <input type="number" ng-model="goldstar" />
+      <input class="chicknumber" type="number" ng-model="goldstar" />
     </div>
     <div ng-show="show_goldstar">
       <h2>Gold Star</h2>
       <h5>Size: 4 - 4.5 lbs  Egg: Brown  Cost: $5.00​​</h5>
       <p>Also called Red Star, Golden Comet or Isa Brown, these chickens are guaranteed to be female because, unlike most breeds, female chicks are a different color than male chicks. A hardy, docile bird, easy to work with, earliest and most prolific layer.</p>
     </div>
+
 
     <div class = "chick-total">
       <p>Chick Count Total</p>
@@ -131,7 +138,7 @@
   ng-hide="firstname.length == null || firstname.length === 0
   || lastname.length == null || lastname.length === 0 || phonenumber.length == null
   || phonenumber.length === 0 || chickenSum() == 0" ng-click="submitChicken()">
-
+</div>
   </form>
 
   <div class="confirmation" ng-hide="hideform == false || thankyou == true">
@@ -150,5 +157,3 @@
     <p>Your order has been placed. If you have any questions, please contact Eggplant
       Urban Farm Supply for assistance.</p>
   </div>
-
-</div>
