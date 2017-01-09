@@ -29,6 +29,7 @@ mainApp.controller('ChickFormController', ['$scope', '$http', function($scope, $
 //If confirmation window answer "Yes"
   $scope.chickenConfirm = function(){
     $scope.thankyou = true;
+    console.log($scope.chickdate);
   }
 
 //If confirmation window answer "No"
